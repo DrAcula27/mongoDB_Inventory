@@ -78,6 +78,23 @@ app.get("/show_all_items", async (req, res) => {
   res.json(response);
 });
 
+// '/search/:itemName' -> this route will take the value of the user's search and get that specific item from the database and send it to the front end to be displayed
+app.get("/search/:itemName", async (req, res) => {
+  let itemToShow = req.params.itemName;
+  let regex = new RegExp(["^", itemToShow, "$"].join(""), "i");
+  let itemRes = await Item.find({ name: regex });
+  res.json(itemRes);
+});
+
+// '/delete_nameless_items' -> this route will delete all fruits that do not have a name
+app.delete("/delete_nameless_items", async (req, res) => {
+  let itemResponse = await Item.deleteMany({ name: "" });
+
+  console.log(`${itemResponse}`);
+
+  res.send({ data: `deleted ${itemResponse.deletedCount} items.` });
+});
+
 // PORT -> tell server where to listen
 app.listen(5000, () => {
   console.log(`Server is Listening on port 5000`);

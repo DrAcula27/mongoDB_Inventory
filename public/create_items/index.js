@@ -8,7 +8,6 @@ submitButton.addEventListener("click", async () => {
   let nextDeliveryString = document.getElementById("next-delivery-input").value;
   let deliveryAmt = document.getElementById("delivery-amt-input").value;
   
-
   const item = {
     nameString,
     priceNumber,
