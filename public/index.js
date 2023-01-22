@@ -2,7 +2,7 @@
 let createItemBtn = document.getElementById("create-item-btn");
 
 createItemBtn.addEventListener("click", () => {
-  window.location.href = "./create_item";
+  window.location.href = "./create_items";
 });
 
 // functionality to move to the display all items page

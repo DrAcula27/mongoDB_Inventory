@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../inventory-management.png">
+    <title>Create Item</title>
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="../common.css" />
+  </head>
+  <body>
+    <h1 id="page-title">Add an Item to the Database</h1>
+    <nav id="navbar">
+      <button type="button" id="go-home-btn">Home</button>
+      <button type="button" id="show-all-items-btn">Show All Items</button>
+    </nav>
+    <div id="container">
+      <p id="upload-status" class="hidden"></p>
+      <div class="input-container">
+        <label for="name-input">Item Name: </label>
+        <input type="text" id="name-input" />
+      </div>
+      <div class="input-container">
+        <label for="price-input">Price: </label>
+        <input type="number" min="0" id="price-input" />
+      </div>
+      <div class="input-container">
+        <label for="inventory-input">Inventory Amount: </label>
+        <input type="number" min="0" id="inventory-input" />
+      </div>
+      <div class="input-container">
+        <label for="nextDelivery-input">Next Delivery Date: </label>
+        <input type="date" id="next-delivery-input" />
+      </div>
+      <div class="input-container">
+        <label for="deliveryAmt-input">Next Delivery Amount: </label>
+        <input type="number" id="delivery-amt-input" />
+      </div>
+      <button id="submit-button">Create Item</button>
+    </div>
+  </body>
+</html>
