@@ -7,7 +7,7 @@ const itemSchema = new mongoose.Schema({
   price: Number,
   inventory: Number,
   nextDelivery: Date,
-  deliveryAmt: Number,
+  deliveryAmt: Number
 });
 
 // make a model from the schema and point it at the collection.

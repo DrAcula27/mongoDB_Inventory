@@ -41,6 +41,42 @@ mongoose.connection.once("open", () => {
 });
 
 // ROUTES
+// '/make_item' -> this route will get information from the front end and create a new Item in the collection
+app.post("/make_item", async (req, res) => {
+  const {
+    nameString: name,
+    priceNumber: price,
+    inventoryNumber: inventory,
+    nextDeliveryDate: deliveryDate,
+    deliveryAmtNumber: deliveryAmt,
+  } = req.body;
+
+  // model methods usually give a promise, so wait for the response
+  let returnedValue = await Item.create({
+    name,
+    price,
+    inventory,
+    deliveryDate,
+    deliveryAmt,
+  });
+
+  console.log(returnedValue);
+  if (returnedValue) {
+    console.log("upload complete");
+  }
+
+  // send final value to the front end
+  res.send(returnedValue);
+});
+
+// '/show_all_items' -> this route will get all Item objects from the database and send them to the front end
+app.get("/show_all_items", async (req, res) => {
+  // get data from database
+  let response = await Item.find({});
+  console.log(response);
+  // send it back to front end
+  res.json(response);
+});
 
 // PORT -> tell server where to listen
 app.listen(5000, () => {
