@@ -22,6 +22,6 @@
     + Make a page that will display all items in your collection.
     + (optional) - make a page that will increase / decrease the inventory of a specific item by a specified number.
 
-INSTEAD OF A FRONTEND
-- You may use thunderclient to test your routes, schema, server, and database. The important thing is that your server and MongoDB work well together. 
-- You still need to setup and serve a public folder, though. 
+### Attributions
+
+Tab icon: <a href="https://www.flaticon.com/free-icons/inventory-management" title="inventory management icons">Inventory management icons created by Freepik - Flaticon</a>
