@@ -6,14 +6,14 @@ submitButton.addEventListener("click", async () => {
   let priceNumber = +document.getElementById("price-input").value;
   let inventoryNumber = +document.getElementById("inventory-input").value;
   let nextDeliveryString = document.getElementById("next-delivery-input").value;
-  let deliveryAmt = document.getElementById("delivery-amt-input").value;
-  
+  let deliveryAmtNumber = +document.getElementById("delivery-amt-input").value;
+
   const item = {
     nameString,
     priceNumber,
     inventoryNumber,
     nextDeliveryString,
-    deliveryAmt,
+    deliveryAmtNumber,
   };
 
   let response = await fetch("http://localhost:5000/make_item", {

@@ -47,7 +47,7 @@ app.post("/make_item", async (req, res) => {
     nameString: name,
     priceNumber: price,
     inventoryNumber: inventory,
-    nextDeliveryDate: deliveryDate,
+    nextDeliveryString: deliveryDate,
     deliveryAmtNumber: deliveryAmt,
   } = req.body;
 

@@ -6,7 +6,7 @@ const itemSchema = new mongoose.Schema({
   name: String,
   price: Number,
   inventory: Number,
-  nextDelivery: Date,
+  deliveryDate: Date,
   deliveryAmt: Number
 });
 
