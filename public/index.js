@@ -30,12 +30,30 @@ searchBtn.addEventListener("click", async (event) => {
     console.log(item);
     try {
       showItemArea.classList.remove("hidden");
+      showItemArea.style.color = "#003057";
       showItemArea.innerHTML = `
-        <p>Name: ${item[0].name}</p>
-        <p>Price: ${item[0].price}</p>
-        <p>Inventory: ${item[0].inventory}</p>
-        <p>Next Delivery Date: ${item[0].deliveryDate}</p>
-        <p>Next Delivery Amount: ${item[0].deliveryAmt}</p>
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td>${item[0].name}</td>
+          </tr>
+          <tr>
+            <td>Price:</td>
+            <td>${item[0].price}</td>
+          </tr>
+          <tr>
+            <td>Inventory:</td>
+            <td>${item[0].inventory}</td>
+          </tr>
+          <tr>
+            <td>Next Delivery Date:</td>
+            <td>${item[0].deliveryDate}</td>
+          </tr>
+          <tr>
+            <td>Next Delivery Amount:</td>
+            <td>${item[0].deliveryAmt}</td>
+          </tr>
+        </table>
         `;
     } catch (error) {
       showItemArea.style.color = "red";

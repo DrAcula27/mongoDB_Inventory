@@ -28,7 +28,6 @@ input:valid ~ span::after {
 
 #show-item-area {
   font-weight: bold;
-  text-align: center;
   border: 2px solid var(--navy-blue);
   border-radius: 1em;
   margin: 30px auto;
